@@ -1,26 +1,21 @@
 import { useState, useEffect } from 'react'
 import store from './store'
 import { add, del } from './action'
+import A from './pages/A'
+import B from './pages/B'
+import { Provider } from 'react-redux'
 
 function App() {
-  const [n, setn] = useState(0)
-  useEffect(() => {
-    store.subscribe(() => {
-      setn(store.getState())
-    })
-  })
-  const add1 = () => {
-    store.dispatch(add(n))
-  }
-  const del1 = () => {
-    store.dispatch(del(n))
-  }
+
   return (
-    <div className="App">
-      <button onClick={add1}>+</button>
-      <button onClick={del1}>-</button>
-      <div>{n}</div>
-    </div>
+    //Provider包裹根组件，内部用了react的context传递数据，store必须
+    <Provider store={store}>
+      <div className="App">
+        <A></A>
+        <B></B>
+      </div>
+    </Provider>
+
   );
 }
 
