@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react'
 import store from './store'
-import { add, del } from './action'
 import A from './pages/A'
 import B from './pages/B'
+import C from './pages/C'
 import { Provider } from 'react-redux'
 
 function App() {
@@ -13,6 +12,7 @@ function App() {
       <div className="App">
         <A></A>
         <B></B>
+        <C></C>
       </div>
     </Provider>
 

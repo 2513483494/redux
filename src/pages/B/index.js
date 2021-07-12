@@ -8,7 +8,6 @@ function B(props) {
     );
 }
 const mapStateToProps = (state) => {
-    console.log('b',state);
     return state
 }
 export default connect(mapStateToProps, null)(B);

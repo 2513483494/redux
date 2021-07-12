@@ -1,8 +1,7 @@
 import { connect } from 'react-redux'
-
+import { add, del } from '../../action/action'
 function A(props) {
     const handleAdd = () => {
-        console.log('a', props);
         props.addOne()
     }
     const handleDel = () => {
@@ -19,14 +18,10 @@ const mapDispatchToProps = dispatch => {
     //返回一个对象，用props可以调用
     return {
         addOne: () => {
-            dispatch({
-                type: 'add'
-            })
+            dispatch(add)
         },
         delOne: () => {
-            dispatch({
-                type: 'del'
-            })
+            dispatch(del)
         }
     }
 }
