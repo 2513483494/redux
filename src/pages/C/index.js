@@ -3,7 +3,7 @@ import 'antd/dist/antd.css'
 import { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { changeInput, addEvent, delEvent } from '../../action/action'
-
+// 11
 let v1
 const C = (props) => {
     const [v, setv] = useState('')
